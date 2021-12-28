@@ -39,22 +39,22 @@
 
                 var user = new ApplicationUser()
                 {
-                    UserName = "dvbtham",
-                    Email = "dvbtham@gmail.com",
+                    UserName = "amdin",
+                    Email = "admin@gmail.com",
                     EmailConfirmed = true,
                     Image = CommonConstants.DefaultAvatar,
                     CreatedDate = DateTime.ParseExact(DateTime.Now.ToShortDateString(), "dd/MM/yyyy", CultureInfo.InvariantCulture),
-                    BirthDay = DateTime.ParseExact("15/09/1996", "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                    BirthDay = DateTime.ParseExact("25/10/2001", "dd/MM/yyyy", CultureInfo.InvariantCulture),
                     Gender = "Nam",
-                    FullName = "Thâm David",
-                    Address = "Gia Lai",
+                    FullName = "admin",
+                    Address = "HCM",
                     PhoneNumber = "01652130546",
                     IsDeleted = false,
                     IsViewed = true
                 };
                 if (manager.Users.Count() == 0)
                 {
-                    manager.Create(user, "123123$");
+                    manager.Create(user, "admin");
 
                     if (!roleManager.Roles.Any())
                     {
@@ -62,7 +62,7 @@
                         roleManager.Create(new IdentityRole { Name = "User" });
                     }
 
-                    var adminUser = manager.FindByEmail("dvbtham@gmail.com");
+                    var adminUser = manager.FindByEmail("admin@gmail.com");
 
                     manager.AddToRoles(adminUser.Id, new string[] { "Admin", "User" });
 
@@ -96,13 +96,13 @@
                 {
                     var contactDetail = new ContactDetail()
                     {
-                        Name = "Shop online - uStora",
-                        Address = "472 Núi Thành",
+                        Name = "Shop online - uBook",
+                        Address = "HCM",
                         Phone = "016 5213 0546",
-                        Email = "dvbtham@gmail.com",
+                        Email = "huudiem@gmail.com",
                         Lat = 16.034562,
                         Lng = 108.222603,
-                        Website = "http://ustora.somee.com",
+                        Website = "http://uBook.somee.com",
                         Description = "",
                         Status = true
                     };
@@ -123,7 +123,7 @@
                 context.SystemConfigs.Add(new SystemConfig()
                 {
                     Code = "HomeTitle",
-                    ValueString = "Trang chủ uStora shop - nơi mua bán uy tín và chất lượng - uStora.com"
+                    ValueString = "Trang chủ uBook shop - nơi mua bán uy tín và chất lượng - uBook.com"
                 });
             }
             if (!context.SystemConfigs.Any(x => x.Code == "HomeMetaKeyword"))
@@ -131,7 +131,7 @@
                 context.SystemConfigs.Add(new SystemConfig()
                 {
                     Code = "HomeMetaKeyword",
-                    ValueString = "Trang chủ uStora shop - nơi mua bán uy tín và chất lượng - uStora.com"
+                    ValueString = "Trang chủ uBook shop - nơi mua bán uy tín và chất lượng - uBook.com"
                 });
             }
             if (!context.SystemConfigs.Any(x => x.Code == "HomeMetaDescription"))
@@ -139,7 +139,7 @@
                 context.SystemConfigs.Add(new SystemConfig()
                 {
                     Code = "HomeMetaDescription",
-                    ValueString = "Trang chủ uStora shop - nơi mua bán uy tín và chất lượng - uStora.com"
+                    ValueString = "Trang chủ uBook shop - nơi mua bán uy tín và chất lượng - uBook.com"
                 });
             }
         }
@@ -155,9 +155,9 @@
                         Name = "Giới thiệu",
                         Alias = "gioi-thieu",
                         CreatedDate = DateTime.Now,
-                        MetaDescription = "Trang giới thiệu của uStora",
-                        MetaKeyword = "Trang giới thiệu của uStora",
-                        Content = @"Là trang web bán hàng online, chuyên cung cấp món hàng trong lĩnh vực thiết bị số: Điện thoại, máy tính cá nhân, máy ảnh,... và một số dịch vụ kèm theo khi mua hàng.",
+                        MetaDescription = "Trang giới thiệu của uBook",
+                        MetaKeyword = "Trang giới thiệu của uBook",
+                        Content = @"Là trang web bán sách, chuyên cung cấp các thể loại sách hay nhất Việt Nam,... và một số dịch vụ kèm theo khi mua hàng.",
                         Status = true
 
                     };

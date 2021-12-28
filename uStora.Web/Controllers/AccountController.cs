@@ -192,7 +192,7 @@ namespace uStora.Web.Controllers
                     content = content.Replace("{{Username}}", newUser.FullName);
                     content = content.Replace("{{Link}}", callbackUrl);
                     ViewBag.Email = registerVm.Email;
-                    MailHelper.SendMail(newUser.Email, "Kích hoạt tài khoản uStora", content);
+                    MailHelper.SendMail(newUser.Email, "Kích hoạt tài khoản uBook", content);
                     return View("EmailConfirmMessage");
                 }
                 AddErrors(result);
@@ -292,7 +292,7 @@ namespace uStora.Web.Controllers
                 // Send an email with this link
                 string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
                 var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                MailHelper.SendMail(model.Email, "Đặt lại mật khẩu tài khoản uStora", "Để đặt lại mật khẩu, vui lòng <a href=\"" + callbackUrl + "\"> click theo đường dẫn này</a>");
+                MailHelper.SendMail(model.Email, "Đặt lại mật khẩu tài khoản uBook", "Để đặt lại mật khẩu, vui lòng <a href=\"" + callbackUrl + "\"> click theo đường dẫn này</a>");
                 return RedirectToAction("ForgotPasswordConfirmation", "Account");
             }
 

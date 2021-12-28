@@ -109,6 +109,5 @@ D:\uStoras\uStora\uStora.Model\bin\Debug\System.Web.Mvc.xml
 D:\uStoras\uStora\uStora.Model\bin\Debug\EPPlus.xml
 D:\uStoras\uStora\uStora.Model\obj\Debug\uStora.Model.csproj.AssemblyReference.cache
 D:\uStoras\uStora\uStora.Model\obj\Debug\uStora.Model.csproj.CoreCompileInputs.cache
-D:\uStoras\uStora\uStora.Model\obj\Debug\uStora.Model.csproj.CopyComplete
 D:\uStoras\uStora\uStora.Model\obj\Debug\uStora.Model.dll
 D:\uStoras\uStora\uStora.Model\obj\Debug\uStora.Model.pdb

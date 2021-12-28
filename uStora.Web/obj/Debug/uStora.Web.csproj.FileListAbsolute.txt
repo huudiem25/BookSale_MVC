@@ -537,4 +537,3 @@ D:\uStoras\uStora\uStora.Web\obj\Debug\uStora.Web.csproj.AssemblyReference.cache
 D:\uStoras\uStora\uStora.Web\obj\Debug\uStora.Web.csproj.CoreCompileInputs.cache
 D:\uStoras\uStora\uStora.Web\obj\Debug\uStora.Web.dll
 D:\uStoras\uStora\uStora.Web\obj\Debug\uStora.Web.pdb
-D:\uStoras\uStora\uStora.Web\obj\Debug\uStora.Web.csproj.CopyComplete

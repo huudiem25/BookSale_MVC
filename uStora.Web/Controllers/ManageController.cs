@@ -190,7 +190,7 @@ namespace uStora.Web.Controllers
                     var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
                     string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    MailHelper.SendMail(user.Email, "Kích hoạt tài khoản uStora", "Chào bạn, bạn đang thiết lập lại mật khẩu, để kích hoạt tài khoản vui lòng <a href=\"" + callbackUrl + "\">click vào đây.</a>");
+                    MailHelper.SendMail(user.Email, "Kích hoạt tài khoản uBook", "Chào bạn, bạn đang thiết lập lại mật khẩu, để kích hoạt tài khoản vui lòng <a href=\"" + callbackUrl + "\">click vào đây.</a>");
                     if (user != null)
                     {
                         await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
